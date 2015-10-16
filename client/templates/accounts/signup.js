@@ -4,7 +4,6 @@ Template.signup.onCreated(function() {
 
 Template.signup.onRendered(function() {
   $('#birthday').combodate({
-  	firstItem: 'none',
   	customClass: 'form-control',
     minYear: 1940,
     maxYear: moment().format('YYYY')  
