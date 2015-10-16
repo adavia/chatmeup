@@ -1,0 +1,9 @@
+<template name="commentSubmit">
+  <form class="comment-form">
+    <div class="form-group {{errorClass 'content'}}">
+      <input type="text" name="content" class="form-control"
+				title="Leave a comment to this image" id="content" placeholder="Leave a comment!">
+      <span class="help-block small">{{errorMessage 'content'}}</span>  
+    </div>
+  </form>
+</template>

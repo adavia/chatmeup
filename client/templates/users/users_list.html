@@ -1,0 +1,28 @@
+<template name="usersList">
+  <div class="row">
+  	{{#if ready}}
+	    {{#each users}}
+	      {{> userItem}}
+	    {{/each}}
+	  {{else}}
+			<div class="text-center">
+				<i class="fa fa-spinner fa-spin"></i> loading users..
+			</div>
+		{{/if}}
+  </div>
+  <div class="row">
+		<div class="col-md-12">
+			{{#if moreResults}}
+	  		<div class="text-center">
+					{{#unless ready}}
+						<i class="fa fa-spinner fa-spin"></i> loading..
+					{{else}}
+						<button id="showMoreResults" type="button" class="btn btn-success">
+							<i class="fa fa-refresh"></i> load more..
+						</button>
+					{{/unless}}
+				</div>
+			{{/if}}
+		</div>
+	</div>
+</template>

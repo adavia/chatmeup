@@ -1,0 +1,25 @@
+<template name="userChannel">
+	<li class="list-group-item">
+		<img class="img-circle" width="35" src="{{primaryPicture userId}}" alt="{{username}}">
+		<a class="user-list" href="{{pathFor 'userImages' _id=userId}}">{{username}}</a>
+		{{#if ownUser}}
+			<div class="btn-group pull-right">
+			  <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			    Actions <span class="caret"></span>
+			  </button>
+			  <ul class="dropdown-menu">
+			    <li><a href="{{pathFor 'userImages' _id=userId}}">View gallery</a></li>
+			    <li><a href="#" class="private">Send private message</a></li>
+			    {{#if isInRole 'admin, moderator'}}
+			    	<li role="separator" class="divider"></li>
+			    	<li><a href="#" class="ban">{{userBan}}</a></li>
+			    {{/if}}
+			    {{#if isInRole 'admin'}}
+			    	<li role="separator" class="divider"></li>
+			    	<li><a href="#" class="permissions">Update permissions</a></li>
+			    {{/if}}
+			  </ul>
+			</div>
+		{{/if}}
+	</li>
+</template>

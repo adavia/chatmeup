@@ -1,0 +1,55 @@
+<template name="userEdit">
+	<div class="modal fade">
+		<div class="modal-dialog modal-md">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4 class="modal-title">Some details to change..</h4>
+				</div>
+				<div class="modal-body">
+					<div class="wrapper">
+						<!-- Nav tabs -->
+						<ul class="nav nav-tabs" role="tablist">
+							<li role="presentation" class="active">
+								<a href="#tab-1" aria-controls="tab-1" role="tab" data-toggle="tab">Details</a>
+							</li>
+							<li role="presentation">
+								<a href="#tab-2" aria-controls="tab-2" role="tab" data-toggle="tab">Images</a>
+							</li>
+						</ul>
+						<!-- Tab panes -->
+						<div class="tab-content">
+							<div role="tabpanel" class="tab-pane active" id="tab-1">
+								<div class="wrapper-body">
+									<form class="edit-profile">
+										<div class="form-group {{errorClass 'status'}}">
+											<label for="status" class="control-label">Marital status</label>
+											<select name="status" class="form-control" 
+													title="Please enter your status" id="status">
+												<option {{selectedOption "s"}} value="s">Single</option>
+												<option {{selectedOption "m"}} value="m">Married</option>
+												<option {{selectedOption "d"}} value="d">Divorced</option>
+												<option {{selectedOption "o"}} value="o">Other</option>
+											</select>
+											<span class="help-block small">{{errorMessage 'status'}}</span>   
+										</div>
+										<div class="form-group {{errorClass 'note'}}">
+											<label for="note" class="control-label">Note</label>
+											<textarea rows="5" class="form-control" name="note" title="Please enter a brief note" id="note" placeholder="Brief note">{{currentUser.profile.note}}</textarea>
+											<span class="help-block small">{{errorMessage 'note'}}</span>  
+										</div>
+										<input type="submit" class="btn btn-success btn-block" value="Save profile">
+									</form>
+								</div>
+							</div>
+							<div role="tabpanel" class="tab-pane" id="tab-2">
+								<div class="wrapper-body">
+									{{#if currentUser}}{{> imagesAdd}}{{/if}}
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</template>

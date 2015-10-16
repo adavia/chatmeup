@@ -1,0 +1,18 @@
+<template name="commentItem">
+	<div class="comment-content">
+		<div class="media">
+			<div class="media-left">
+			  <a href="{{pathFor 'userImages' _id=userId}}">
+			    <img class="media-object img-circle" width="30" src="{{primaryPicture userId}}" alt="{{username}}">
+			  </a>
+			</div>
+		  <div class="media-body">
+		  	{{#if ownComment}}
+		  		<a href="#" class="delete-comment pull-right"><i class="fa fa-times"></i></a>
+		  	{{/if}}
+		    <p class="no-margin">{{author}} says: {{content}}</p>
+		    <small class="text-muted">{{formatDate submitted}}</small>
+		  </div>
+		</div>
+	</div>
+</template>

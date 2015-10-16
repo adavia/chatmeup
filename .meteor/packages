@@ -1,0 +1,25 @@
+# Meteor packages used by this project, one per line.
+# Check this file (and the other files in this directory) into your repository.
+#
+# 'meteor add' and 'meteor remove' will edit this file for you,
+# but you can also edit it by hand.
+
+meteor-platform
+underscore
+less
+nemo64:bootstrap
+iron:router
+accounts-password
+momentjs:moment
+email
+raix:ui-dropped-event
+peppelg:bootstrap-3-modal
+cfs:standard-packages
+cfs:gridfs
+cfs:s3
+reactive-var
+cfs:graphicsmagick
+matb33:collection-hooks
+mrt:combodate
+tmeasday:publish-counts
+alanning:roles

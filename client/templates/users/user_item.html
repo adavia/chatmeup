@@ -1,0 +1,18 @@
+<template name="userItem">
+  <div class="col-md-3">
+    <div class="wrapper w-green">
+	  	<div class="wrapper-body">
+	  		<div class="text-center">
+	  			<div class="profile-data">
+	  				<label class="label label-success"><i class="fa fa-birthday-cake"></i>
+	  					{{userAge profile.birthday}}
+	  				</label>
+	  			</div>
+	  			<img width="80" class="img-circle" src="{{primaryPicture _id}}">
+	  			<h4><a href="{{pathFor 'userImages'}}">{{gender}} {{username}}</a></h4>
+	  			<small>{{country.name}}, {{country.code}}</small>
+	  		</div>
+      </div>
+    </div>
+  </div>
+</template>

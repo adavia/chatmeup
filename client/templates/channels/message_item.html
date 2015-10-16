@@ -1,0 +1,17 @@
+<template name="messageItem">
+	<div class="message-talk">
+		<div class="media">
+			<div class="media-left">
+				<a href="{{pathFor 'userImages' _id=userId}}">
+					<img class="media-object img-circle" width="40" 
+						src="{{primaryPicture userId}}" alt="{{username}}">
+				</a>
+			</div>
+			<div class="media-body">
+				<h4>{{username}}</h4>
+				<small class="text-muted">{{formatDate createdAt}}</small>
+				<div class="message-content">{{content}}</div>
+			</div>
+		</div>
+	</div>	
+</template>

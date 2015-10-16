@@ -1,0 +1,18 @@
+<template name="commentsList">
+	<div class="comment-list">
+		{{#each comments}}
+			{{> commentItem}}
+		{{/each}}
+		{{#if Template.subscriptionsReady}}
+	    {{#if hasMoreComments}}
+	    	<div class="text-center">
+	      	<a class="load-more" href="#">load more comments</a>
+	      </div>
+	    {{/if}}
+  	{{else}}
+			<div class="text-center">
+				<i class="fa fa-spinner fa-spin"></i> loading..
+			</div>
+		{{/if}}
+	</div>
+</template>

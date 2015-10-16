@@ -1,0 +1,28 @@
+<template name="userRoles">
+	<div class="modal fade">
+		<div class="modal-dialog modal-sm">
+			<div class="modal-content">
+				{{#if Template.subscriptionsReady}}
+					<div class="modal-header">
+						<h4 class="modal-title">Update roles from {{userRoles.username}}</h4>
+					</div>
+					<div class="modal-body">
+						<form class="form-roles">
+							{{#each userRoles.roles}}
+								<div class="form-group">
+							    <div class="checkbox">
+									  <label>
+									    <input type="checkbox" name="roles" value="{{this.name}}" {{this.checked}}>
+									      {{this.label}}
+									  </label>
+									</div>
+							  </div>
+							{{/each}}
+							<input type="submit" class="btn btn-success btn-block" value="Update roles">
+						</form>	
+					</div>
+				{{/if}}
+			</div>
+		</div>
+	</div>
+</template>

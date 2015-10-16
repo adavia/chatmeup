@@ -1,0 +1,15 @@
+<template name="privateAdd">
+	<div class="private-form">
+		<form class="send-private">
+			<div class="form-group {{errorClass 'content'}}">
+				<div class="input-group">
+					<input type="text" class="form-control" name="content" title="Type your message" placeholder="Type your message here...">
+					<span class="input-group-btn">
+						<button type="submit" class="btn btn-success">Send</button>
+					</span>
+				</div>
+				<span class="help-block small">{{errorMessage 'content'}}</span> 
+			</div>
+		</form>
+	</div>
+</template>

@@ -1,0 +1,129 @@
+/* DEFAULT LAYOUT */
+
+h1, h2, h3 {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.navbar-brand {
+	font-family: "Indie Flower", cursive;
+	font-size: 23px !important;
+}
+
+.color-line {
+	background: #f7f9fa;
+	height: 6px;
+	background-image: linear-gradient(to right, #34495e, #34495e 25%, #9b59b6 25%, #9b59b6 35%, #3498db 35%, #3498db 45%, #62cb31 45%, #62cb31 55%, #ffb606 55%, #ffb606 65%, #e67e22 65%, #e67e22 75%, #e74c3c 85%, #e74c3c 85%, #c0392b 85%, #c0392b 100%);
+	background-size: 100% 6px;
+	background-position: 50% 100%;
+	background-repeat: no-repeat;
+}
+
+.wrapper {
+	border: none;
+	box-shadow: none;
+	margin-bottom: 25px;
+	.wrapper-heading {
+		color: inherit;
+		font-weight: 600;
+		border-bottom: none;
+	}
+	.wrapper-body {
+		background: #fff;
+		border: 1px solid #e4e5e7;
+		border-radius: 2px;
+		padding: 20px;
+		position: relative;
+	}
+	.wrapper-footer {
+		color: inherit;
+		border: 1px solid #e4e5e7;
+		border-top: none;
+		font-size: 90%;
+		background: #f7f9fa;
+		padding: 10px 15px;
+		border-bottom-right-radius: 3px;
+		border-bottom-left-radius: 3px;
+	}
+}
+
+.w-build {
+	background: #fff;
+	border-color: #e4e5e7;
+	border: 1px solid #e4e5e7;
+	padding: 10px 10px;
+	border-radius: 2px;
+}
+
+.wrapper-tools {
+	display: inline-block;
+	float: right;
+	margin-top: 0;
+	padding: 0;
+	position: relative;
+	a {
+		margin-left: 5px;
+		color: #9d9fa2;
+		cursor: pointer;
+	}
+}
+
+.wrapper.w-green .wrapper-body {
+	border-top: 2px solid #62cb31;
+}
+
+.wrapper.w-blue .wrapper-body {
+	border-top: 2px solid #3498db;
+}
+
+@-webkit-keyframes fadeOut {
+  0% {opacity: 0;}
+  10% {opacity: 1;}
+  90% {opacity: 1;}
+  100% {opacity: 0;}
+}
+
+@keyframes fadeOut {
+  0% {opacity: 0;}
+  10% {opacity: 1;}
+  90% {opacity: 1;}
+  100% {opacity: 0;}
+}
+
+.alert-wrapper{
+  position: fixed;
+  z-index: 10000;
+  padding: 10px;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  pointer-events: none;
+}
+
+.alert {
+  animation: fadeOut 4000ms ease-in 0s 1 forwards;
+  -webkit-animation: fadeOut 4000ms ease-in 0s 1 forwards;
+  -moz-animation: fadeOut 4000ms ease-in 0s 1 forwards;
+  width: 350px;
+  float: right;
+  clear: both;
+  margin-bottom: 5px;
+  pointer-events: auto;
+}
+
+.label-menu-corner {
+	.label {
+		font-size: 8px;
+		line-height: 12px;
+		padding: 1px 4px;
+		position: absolute;
+		left: 8px;
+		top: 11px;
+	}
+}
+
+.notifications-wrapper {
+	max-height: 200px;
+	overflow-y: auto;
+}

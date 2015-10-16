@@ -1,0 +1,20 @@
+<template name="messagePrivateItem">
+	<div class="message-talk">
+		<div class="media">
+			<div class="media-left">
+				<a href="{{pathFor 'userImages' _id=sender}}">
+					<img class="media-object img-circle" width="35" 
+						src="{{primaryPicture sender}}" alt="{{username}}">
+				</a>
+			</div>
+			<div class="media-body">
+				<p>{{username}} 
+					<small class="text-muted pull-right">
+						<i class="fa fa-clock-o"></i> {{formatDate createdAt}}
+					</small>
+				</p>
+				<div class="message-content">{{content}}</div>
+			</div>
+		</div>
+	</div>	
+</template>

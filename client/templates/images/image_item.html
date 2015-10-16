@@ -1,0 +1,16 @@
+<template name="imageItem">
+  <div class="col-xs-6 col-md-2">
+  	<div class="thumbnail">
+      <a class="image-item" href="#">
+      	<img src="{{this.url store='thumb' uploading='/uploading.jpg' storing='/uploading.jpg'}}" />
+    	</a>
+      <div class="caption">
+      	{{#if ownImage}}
+        	<p><a class="delete-image"><i class="fa fa-trash"></i> remove</a></p>
+      	{{/if}}
+      	<small>{{formatDate uploadedAt}}</small>
+      	<small class="pull-right"><i class="fa fa-comment-o"></i> {{commentsCount}}</small>
+      </div>
+    </div>
+  </div>
+</template>

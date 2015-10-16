@@ -1,0 +1,49 @@
+<template name="imagePage">
+	<div class="modal fade">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+				<div class="modal-body">
+					{{#if Template.subscriptionsReady}}
+						<div class="row">
+							<div class="col-md-7">	
+								<img class="img-responsive" src="{{image.url store='original'}}" />
+							</div>
+							<div class="col-md-5">
+								<div class="media">
+									<div class="media-left">
+										<a href="{{pathFor 'userImages' _id=image.userId}}">
+											<img class="media-object img-circle" width="35" src="{{primaryPicture image.userId}}" 
+												alt="{{username}}">
+										</a>
+									</div>
+									<div class="media-body">
+										<p class="no-margin">{{image.username}}</p>
+										<small class="text-muted">{{formatDate image.uploadedAt}}
+											{{#if ownImage image.userId}}
+												<button class="edit-details btn btn-xs btn-default pull-right"><i class="fa fa-pencil"></i></button>
+											{{/if}}
+										</small>
+									</div>
+								</div>
+								<p class="m-t-md">{{image.description}}</p>
+								{{#if ownImage image.userId}}
+									{{> imageDetails}}
+								{{/if}}	
+
+								{{> commentsList}}
+
+								{{#if currentUser}}
+				      		{{> commentSubmit}}
+				    		{{/if}}
+							</div>
+						</div>
+					{{else}}
+						<div class="text-center">
+							<i class="fa fa-spinner fa-spin"></i> loading..
+						</div>
+					{{/if}}
+				</div>
+			</div>
+		</div>
+	</div>
+</template>

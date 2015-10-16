@@ -1,0 +1,64 @@
+<template name="signup">
+	<div class="signup-container">
+	  <div class="row">
+	  	<div class="col-md-12">
+	  		<div class="text-center m-b-md">
+	  			<h3>SIGN UP AND BE PART OF THE COMMUNITY</h3>
+	  			<small>Share some details about you and start the fun!</small>
+	  		</div>
+	  		<div class="wrapper">
+	  			<div class="wrapper-body">
+			  		<form class="signup">
+			  			<div class="form-group {{errorClass 'username'}}">
+						    <label for="username" class="control-label">Username</label> 
+					      <input type="text" name="username" class="form-control"
+					      	title="Please enter your username" id="username" placeholder="myCoolUsername">
+					      <span class="help-block small">{{errorMessage 'username'}}</span>   
+						  </div>
+						  <div class="form-group {{errorClass 'email'}}">
+						    <label for="email" class="control-label">Email</label> 
+					      <input type="text" name="email" class="form-control"
+					      	title="Please enter your email" id="email" placeholder="example@gmail.com">
+					      <span class="help-block small">{{errorMessage 'email'}}</span>   
+						  </div>
+						  <div class="form-group {{errorClass 'password'}}">
+						    <label for="password" class="control-label">Password</label>
+					      <input type="password" name="password" class="form-control"
+					       	title="Please enter your email" id="password" placeholder="Password">
+					      <span class="help-block small">{{errorMessage 'password'}}</span> 
+						  </div>
+						  <div class="form-group {{errorClass 'birthday'}}">
+						    <label for="birthday" class="control-label">Date of Birth</label>
+						    <input type="text" name="birthday" id="birthday"
+						    	data-format="DD-MM-YYYY" data-template="D MMM YYYY" />
+					      <span class="help-block small">{{errorMessage 'birthday'}}</span>   
+						  </div>
+						 	<div class="form-group {{errorClass 'gender'}}">
+						 		<label class="control-label">Gender</label>
+						 		<div class="gender">
+							 		<label class="radio-inline">
+									  <input type="radio" name="gender" value="m"> Male
+									</label>
+									<label class="radio-inline">
+									  <input type="radio" name="gender" value="f"> Female
+									</label>
+								</div>
+								<span class="help-block small">{{errorMessage 'gender'}}</span>   
+						 	</div>
+						 	<div class="form-group">
+						    <label for="country" class="control-label">Country of Residence</label>
+						    <select name="country" class="form-control" title="Please enter your location" id="country">
+								  {{#each countries}}
+								  	<option value="{{code}}">{{name}}</option>
+								  {{/each}}
+								</select>
+					      <span class="help-block small"> Your current location</span>   
+						  </div>
+						  <input type="submit" name="submit" class="btn btn-success btn-block" value="Sign up">   
+						</form>
+					</div>
+				</div>
+	  	</div>
+	  </div>
+	</div>
+</template>

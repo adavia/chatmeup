@@ -1,0 +1,13 @@
+{
+  "private": {
+    "AWSAccessKeyId" : "<AWS KEY>",
+    "AWSSecretAccessKey" : "<AWS SECRET>",
+    "AWSBucket" : "<AWS BUCKET>"
+  },
+  "smtp": {
+    "username" : "andresi.davia@gmail.com",
+    "password" : "g4sKOdeTxLlZKv3ozP_-CQ",
+    "server" : "smtp.mandrillapp.com",
+    "port" : 587
+  }
+}
