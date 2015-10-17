@@ -20,9 +20,7 @@ Meteor.publish('images', function(options, userId) {
 
   Counts.publish(this, 'user-images-' + userId, Images.find(findQuery));
 
-  if(this.userId && this.userId === userId) {
-  	return Images.find(findQuery, options);
-  }
+  return Images.find(findQuery, options);
 });
 
 Meteor.publish('userPrimaryImage', function(userId) {
